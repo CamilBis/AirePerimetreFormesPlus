@@ -1,4 +1,4 @@
-#include "point.h"
+#include "headers/point.h"
 #include <iostream>
 
 Point::Point(int x, int y): _x(x), _y(y) {
