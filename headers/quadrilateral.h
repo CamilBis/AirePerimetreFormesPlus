@@ -7,12 +7,11 @@
 
 class Quadrilateral: public Shape{
     public:
-        Quadrilateral(Point A, Point B, Point C, Point D);
-    protected:
-        Point _pointA;
-        Point _pointB;
-        Point _pointC;
-        Point _pointD;
+        Quadrilateral(Point* A, Point* B, Point* C, Point* D);
+        float getArea() const;
+        float getPerimeter() const;
+    private:
+        Point* _points[4];
 };
 
 #endif

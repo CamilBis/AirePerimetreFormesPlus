@@ -3,8 +3,8 @@
 
 #include "shape.h"
 
-class Triangle: public Shape{
-
+class Rectangle: public Shape{
+    
 };
 
 #endif

@@ -19,3 +19,8 @@ void Point::setX(int newX){
 void Point::setY(int newY){
     _y = newY;
 }
+
+float Point::getDistance(Point* B){
+    float valueDistance = sqrt( pow( ( B->getX() - _x ) ,2) + pow((B->getY() - _y),2) );
+    return valueDistance;
+} 
