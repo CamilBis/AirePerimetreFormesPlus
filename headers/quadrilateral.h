@@ -10,7 +10,7 @@ class Quadrilateral: public Shape{
         Quadrilateral(Point* A, Point* B, Point* C, Point* D);
         float getArea() const;
         float getPerimeter() const;
-    private:
+    protected:
         Point* _points[4];
 };
 
