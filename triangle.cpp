@@ -22,15 +22,12 @@ float Triangle::getPerimeter() const{
 }
 
 bool Triangle::verifyRight() const{
-    float measure1, measure2, measure3;
-    
-    measure1 = _points[0]->getDistance(_points[1]);
-    measure2 = _points[1]->getDistance(_points[2]);
-    measure3 = _points[2]->getDistance(_points[0]);
-
-    if (pow(measure1,2) + pow(measure2,2) == pow(measure3,2) 
-    || pow(measure1,2) + pow(measure3,2) == pow(measure2,2)
-    || pow(measure3,2) + pow(measure2,2) == pow(measure1,2))
-        return true;
+    float measures[3];
+    measures[0] = pow(_points[0]->getDistance(_points[1]),2);
+    measures[1] = pow(_points[1]->getDistance(_points[2]),2);
+    measures[2] = pow(_points[2]->getDistance(_points[0]),2);
+    return measures[1] + measures[2] == measures[3] ||
+        measures[2] + measures[3] == measures[1] ||
+        measures[1] + measures[3] == measures[2];
     return false;
 }

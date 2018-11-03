@@ -4,11 +4,11 @@
 Point::Point(int x, int y): _x(x), _y(y) {
 }
 
-int Point::getX(){
+int Point::getX() const{
     return _x;
 }
 
-int Point::getY(){
+int Point::getY() const{
     return _y;
 }
 
@@ -20,7 +20,6 @@ void Point::setY(int newY){
     _y = newY;
 }
 
-float Point::getDistance(Point* B){
-    float valueDistance = sqrt( pow( ( B->getX() - _x ) ,2) + pow((B->getY() - _y),2) );
-    return valueDistance;
+float Point::getDistance(Point* B) const{
+    return sqrt( pow( ( B->getX() - _x ) ,2) + pow((B->getY() - _y),2) );
 } 

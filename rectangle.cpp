@@ -22,4 +22,3 @@ Rectangle::Rectangle(Point* A, Point* B, Point* C, Point* D): Quadrilateral(A,B,
         return;
     }
 }
-
