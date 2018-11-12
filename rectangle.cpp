@@ -1,7 +1,7 @@
 #include "headers/rectangle.h"
 
 Rectangle::Rectangle(Point* A, Point* B, Point* C, Point* D): Quadrilateral(A,B,C,D){
-    if(A->getX() == B->getX()){
+    if(A->getX() == B->getX()){ //Si le quadrilatère n'est pas un rectangle...
         _measures[0] = A->getX() - B->getX();
     } else {
         std::cout << "Ceci n'est pas un rectangle!" << std::endl;
